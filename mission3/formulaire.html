@@ -1,0 +1,110 @@
+<!-- Roman DOYELLE -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulaire</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Formulaire d'inscription</h1>
+  
+    <form action="merci.html" method="get">
+      <div class="input">
+        <label for="pseudo">Pseudo</label>
+        <input type="text" name="pseudo" id="pseudo" required placeholder="Mon pseudo">
+      </div>
+  
+      <div class="input">
+        <label for="prenom">Prénom</label>
+        <input type="text" name="prenom" id="prenom" required placeholder="Mon prénom">
+      </div>
+  
+      <div class="input">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required placeholder="nom@domaine.com">
+      </div>
+  
+      <div class="input">
+        <label for="mdp">Mot de passe</label>
+        <input type="password" name="mdp" id="mdp" required placeholder="motdepasse">
+      </div>
+  
+      <div class="input">
+        <label for="avatar">Avatar</label>
+        <input type="file" name="avatar" id="avatar">
+      </div>
+  
+      <div class="input">
+        <label for="pays">Pays</label>
+        <select name="pays" id="pays">
+          <option value="nice">Nice</option>
+          <option value="paris">Paris</option>
+        </select>
+      </div>
+  
+      <div class="input">
+        <label for="">Fruits préférés ?</label>
+        <label for="pomme">
+          Pomme
+          <input type="checkbox" name="pomme" id="pomme">
+        </label>
+        <label for="poire">
+          Poire
+          <input type="checkbox" name="poire" id="poire">
+        </label>
+      </div>
+  
+      <div class="input">
+        <label for="civil">Civilité</label>
+        <label for="monsieur">
+          Monsieur
+          <input type="radio" name="monsieur" id="monsieur">
+        </label>
+        <label for="madame">
+          Madame
+          <input type="radio" name="madame" id="madame">
+        </label>
+      </div>
+  
+      <div class="input">
+        <label for="ville">Ville</label>
+        <input type="text" name="ville" id="ville" required placeholder="Paris">
+      </div>
+  
+      <div class="input">
+        <label for="code">Code postal</label>
+        <input type="text" name="code" id="code" required placeholder="75000">
+      </div>
+  
+      <div class="input">
+        <label for="adresse">Adresse</label>
+        <textarea name="adresse" id="adresse" rows="5" cols="50" required placeholder="Adresse"></textarea>
+      </div>
+  
+      <div class="input">
+        <label for="naissance">Naissance</label>
+        <input type="date" name="naissance" id="naissance" required>
+      </div>
+  
+      <div class="input">
+        <label for="jauge">Jauge</label>
+        <input type="range" name="jauge" id="jauge" min="0" max="100" value="5">
+      </div>
+  
+      <div class="input">
+        <label for="couleur">Couleur</label>
+        <input type="color" name="couleur" id="couleur">
+      </div>
+  
+      <div class="confirm">
+        <a href="mission3.html">Retour</a>
+        <button type="submit">Envoyer</button>
+      </div>
+  
+    </form>
+  </div>
+</body>
+</html>
