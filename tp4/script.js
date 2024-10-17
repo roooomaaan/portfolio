@@ -21,13 +21,25 @@ function calcul_moyenne() {
   var moyenne = somme / 3
   document.write("Moyenne: " + moyenne + "<br>")
 
+  if (moyenne > 20 || moyenne < 0) {
+    document.write("<hr>Moyenne invalide")
+    document.body.style.backgroundColor = "red"
+    return
+  }
+
   if (moyenne < 10) {
-    document.write("Refusé")
+    document.write("Refusé <hr>Redoublant")
     document.body.style.backgroundColor = "red"
   } else {
-    document.write("Accepté")
+    document.write("Accepté <hr>")
     document.body.style.backgroundColor = "green"
+    if (moyenne > 14) {
+      document.write("Mention bien")
+    } else {
+      document.write("Mention passable")
+    }
   }
+
 }
 
 function test_couleur() {
