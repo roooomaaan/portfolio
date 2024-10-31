@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  padding-left: 12%;
+  padding-right: 12%;
+  background-color: #f2e5d7;
+}
+
+.box {
+  border: 4px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #e6d9ca;
+  box-shadow: 8px 5px;
+}
+
+.header {
+  display: flex;
+  /* Aligner les elements de chaque côtés de la page */
+  justify-content: space-between;
+  /* Aligner verticalement */
+  /* align-items: center; */
+}
+
+.profile {
+  /* Ne pas dépasser du cadre */
+  object-fit: cover;
+  display: block;
+  width: 60%;
+  height: 130px;
+  /* Centrer grâce aux marges automatiques */
+  margin: auto;
+  /* Image ronde */
+  border-radius: 100%;
+  /* Retirer la marge à droite pour que l'element s'y colle */
+  margin-right: 0;
+}
+
+.section {
+  display: flex;
+  /* Espacement horizontal entre les elements */
+  column-gap: 20px;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+}
