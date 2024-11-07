@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Facture</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Facture</h1>
+    <table class="invoice-table">
+      <tr class="header-row">
+        <td><b>Article</b></td>
+        <td><b>Prix unitaire</b></td>
+        <td><b>Quantité</b></td>
+        <td><b>Résultat</b></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="article1" id="article1" class="input-field"></td>
+        <td><input type="number" name="prix1" id="prix1" class="input-field"></td>
+        <td><input type="number" name="quantite1" id="quantite1" class="input-field"></td>
+        <td><input type="text" name="result1" id="result1" class="result-field" readonly></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="article2" id="article2" class="input-field"></td>
+        <td><input type="number" name="prix2" id="prix2" class="input-field"></td>
+        <td><input type="number" name="quantite2" id="quantite2" class="input-field"></td>
+        <td><input type="text" name="result2" id="result2" class="result-field" readonly></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="article3" id="article3" class="input-field"></td>
+        <td><input type="number" name="prix3" id="prix3" class="input-field"></td>
+        <td><input type="number" name="quantite3" id="quantite3" class="input-field"></td>
+        <td><input type="text" name="result3" id="result3" class="result-field" readonly></td>
+      </tr>
+      <tr class="total-row">
+        <td><b>Total TTC</b></td>
+        <td></td>
+        <td></td>
+        <td><input type="text" name="total" id="total" class="total-field" readonly></td>
+      </tr>
+    </table>
+    <div class="button-group">
+      <button onclick="reset()" class="button">Reset</button>
+      <button onclick="calculer()" class="button">Calculer</button>
+    </div>
+
+    <a href="../index.html">Retour</a>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

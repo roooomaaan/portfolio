@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculatrice</title>
+</head>
+<body>
+  <div class="calculator-container">
+    <h1>Calculatrice</h1>
+    <div class="input-section">
+      <input type="number" name="input1" id="input1" class="input-field" placeholder="Entrez un nombre">
+      <input type="number" name="input2" id="input2" class="input-field" placeholder="Entrez un nombre">
+    </div>
+
+    <div class="button-section">
+      <button type="button" onclick="add()" class="button">+</button>
+      <button type="button" onclick="sub()" class="button">-</button>
+      <button type="button" onclick="mul()" class="button">*</button>
+      <button type="button" onclick="div()" class="button">/</button>
+    </div>
+
+    <div class="button-section">
+      <button type="button" onclick="even()" class="button">Parité</button>
+      <button type="button" onclick="swap()" class="button">Échange</button>
+    </div>
+
+    <div class="result-section">
+      <input type="text" name="result" id="result" class="result-field" readonly placeholder="Résultat">
+      <span id="text" class="text-output"></span>
+    </div>
+
+    <a href="../index.html">Retour</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
