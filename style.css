@@ -4,10 +4,16 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: normal;
+  text-align: center;
+  background-color: #d8c9b7;
 }
 
 a {
-  color: blue;
+  color: black;
+}
+
+a:hover {
+  opacity: 80%;
 }
 
 .button {

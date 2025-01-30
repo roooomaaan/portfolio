@@ -1,0 +1,20 @@
+.questions {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.question {
+  border: 1px solid black;
+  width: 40%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  display: none;
+}

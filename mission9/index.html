@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>QCM</title>
+  </head>
+
+  <body>
+    <h1>QCM</h1>
+
+    <script>
+      function validate() {
+        console.log("ok");
+      }
+
+      function erase(questions) {
+        for (let index = 0; index < questions; index++) {
+          document.querySelector('input[type="radio"]:checked').checked = false;
+        }
+      }
+    </script>
+
+    <div class="questions">
+      <section class="question">
+        <h3>Question 1</h3>
+        <p>Ceci est une question ?</p>
+
+        <div class="reponse">
+          <input type="radio" name="q1" id="q11" value="affe" />
+          <label for="q11">Réponse 1</label>
+        </div>
+        <div class="reponse">
+          <input type="radio" name="q1" id="q12" value="affe" />
+          <label for="q12">Réponse 2</label>
+        </div>
+        <div class="reponse">
+          <input type="radio" name="q1" id="q13" value="affe" />
+          <label for="q13">Réponse 3</label>
+        </div>
+        <div class="reponse">
+          <input type="radio" name="q1" id="q14" value="affe" />
+          <label for="q14">Réponse 4</label>
+        </div>
+      </section>
+
+      <section class="question">
+        <h3>Question 2</h3>
+        <p>Ceci est une question ?</p>
+
+        <div class="reponse">
+          <input type="radio" name="q2" id="q21" value="affe" />
+          <label for="q21">Réponse 1</label>
+        </div>
+        <div class="reponse">
+          <input type="radio" name="q2" id="q22" value="affe" />
+          <label for="q22">Réponse 2</label>
+        </div>
+        <div class="reponse">
+          <input type="radio" name="q2" id="q23" value="affe" />
+          <label for="q23">Réponse 3</label>
+        </div>
+        <div class="reponse">
+          <input type="radio" name="q2" id="q24" value="affe" />
+          <label for="q24">Réponse 4</label>
+        </div>
+      </section>
+
+      <button type="submit" onclick="validate()">Envoyer</button>
+      <button type="submit" onclick="erase(2)">Effacer</button>
+      <button type="submit" onclick="correction()">Corrigé</button>
+    </div>
+
+    <a href="../index.html">Retour</a>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+.questions {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  gap: 10px;
+  width: 40%;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  display: none;
+}
