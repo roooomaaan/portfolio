@@ -1,0 +1,133 @@
+body {
+  font-family: "Courier New", monospace;
+  background-color: #000;
+  color: #0f0;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #0ff;
+  font-size: 2.5em;
+  text-shadow: 0 0 10px #0ff;
+  border-bottom: 2px solid #0ff;
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #ff0;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  border-bottom: 1px dotted #ff0;
+  padding-bottom: 5px;
+}
+
+/* Horizontal Links Container */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+section > h2 {
+  display: inline-block;
+}
+
+a {
+  color: #f0f;
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: rgba(255, 0, 255, 0.1);
+  border: 1px solid rgba(255, 0, 255, 0.3);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin: 5px;
+  min-width: 80px;
+  text-align: center;
+}
+
+a:hover {
+  color: #fff;
+  background-color: rgba(255, 0, 255, 0.3);
+  border-color: #f0f;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+/* CRT Screen Effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.1;
+}
+
+/* Scanline Effect */
+@keyframes scanline {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: scanline 7.5s linear 0s infinite;
+  opacity: 0.1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  section > a {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

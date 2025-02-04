@@ -12,13 +12,54 @@
     <h1>QCM</h1>
 
     <script>
-      function validate() {
-        console.log("ok");
+      const answers = {
+        q1: "r3",
+        q2: "r2",
       }
 
-      function erase(questions) {
-        for (let index = 0; index < questions; index++) {
-          document.querySelector('input[type="radio"]:checked').checked = false;
+      function validate() {
+        let score = 0
+        let result = document.getElementById("result")
+        result.innerHTML = ""
+
+        for (let question in answers) {
+          let selected = document.querySelector(
+            `input[name="${question}"]:checked`
+          )
+
+          if (!selected) {
+            alert("Veuillez sélectionnez des réponses")
+            return
+          }
+
+          if (selected.value === answers[question]) {
+            score++
+          }
+
+          let total = Object.keys(answers).length
+          result.innerHTML = `Score: ${score} / ${total}`
+        }
+      }
+
+      function erase() {
+        document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+          radio.checked = false
+        })
+      }
+
+      function correct() {
+        for (let question in answers) {
+          let correctAnswer = answers[question]
+          let correctRadio = document.querySelector(
+            `input[name="${question}"][value="${correctAnswer}"]`
+          )
+
+          let classes = correctRadio.parentElement.classList
+          if (classes.contains("correct")) {
+            correctRadio.parentElement.classList.remove("correct")
+          } else {
+            correctRadio.parentElement.classList.add("correct")
+          }
         }
       }
     </script>
@@ -26,51 +67,53 @@
     <div class="questions">
       <section class="question">
         <h3>Question 1</h3>
-        <p>Ceci est une question ?</p>
+        <p>Qui est le créateur de Linux ?</p>
 
         <div class="reponse">
-          <input type="radio" name="q1" id="q11" value="affe" />
-          <label for="q11">Réponse 1</label>
+          <input type="radio" name="q1" id="q11" value="r1" />
+          <label for="q11">Jeff Bezos</label>
         </div>
         <div class="reponse">
-          <input type="radio" name="q1" id="q12" value="affe" />
-          <label for="q12">Réponse 2</label>
+          <input type="radio" name="q1" id="q12" value="r2" />
+          <label for="q12">Elon Musk</label>
         </div>
         <div class="reponse">
-          <input type="radio" name="q1" id="q13" value="affe" />
-          <label for="q13">Réponse 3</label>
+          <input type="radio" name="q1" id="q13" value="r3" />
+          <label for="q13">Linus Torvalds</label>
         </div>
         <div class="reponse">
-          <input type="radio" name="q1" id="q14" value="affe" />
-          <label for="q14">Réponse 4</label>
+          <input type="radio" name="q1" id="q14" value="r4" />
+          <label for="q14">Bill Gates</label>
         </div>
       </section>
 
       <section class="question">
         <h3>Question 2</h3>
-        <p>Ceci est une question ?</p>
+        <p>Quel balise utiliser pour faire un lien hypertexte ?</p>
 
         <div class="reponse">
-          <input type="radio" name="q2" id="q21" value="affe" />
-          <label for="q21">Réponse 1</label>
+          <input type="radio" name="q2" id="q21" value="r1" />
+          <label for="q21">link</label>
         </div>
         <div class="reponse">
-          <input type="radio" name="q2" id="q22" value="affe" />
-          <label for="q22">Réponse 2</label>
+          <input type="radio" name="q2" id="q22" value="r2" />
+          <label for="q22">a</label>
         </div>
         <div class="reponse">
-          <input type="radio" name="q2" id="q23" value="affe" />
-          <label for="q23">Réponse 3</label>
+          <input type="radio" name="q2" id="q23" value="r3" />
+          <label for="q23">hypertext</label>
         </div>
         <div class="reponse">
-          <input type="radio" name="q2" id="q24" value="affe" />
-          <label for="q24">Réponse 4</label>
+          <input type="radio" name="q2" id="q24" value="r4" />
+          <label for="q24">goto</label>
         </div>
       </section>
 
+      <div id="result"></div>
+
       <button type="submit" onclick="validate()">Envoyer</button>
-      <button type="submit" onclick="erase(2)">Effacer</button>
-      <button type="submit" onclick="correction()">Corrigé</button>
+      <button type="submit" onclick="erase()">Effacer</button>
+      <button type="submit" onclick="correct()">Corrigé</button>
     </div>
 
     <a href="../index.html">Retour</a>

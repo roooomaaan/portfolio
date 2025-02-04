@@ -1,74 +1,72 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Quizz</title>
-</head>
-<body>
-  <h1>Quizz</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quizz</title>
+  </head>
+  <body>
+    <h1>Quizz</h1>
 
-  <script>
-    function toggleSolution(nom) {
-      const el = document.getElementById(nom)
-      const dis = el.style.display
-      if(dis === "block") {
-        el.style.display = "none"
-      } else {
-        el.style.display = "block"
+    <script>
+      function toggleSolution(nom) {
+        const el = document.getElementById(nom)
+        const dis = el.style.display
+        if (dis === "block") {
+          el.style.display = "none"
+        } else {
+          el.style.display = "block"
+        }
       }
-    }
-  </script>
+    </script>
 
-  <div class="questions">
-    <section class="question">
-      <h3>Somme</h3>
-      <p>Ecrire une fonction qui permet de calculer la somme de deux nombres.</p>
-      <button onclick="toggleSolution('q1')">Voir la solution</button>
-      <button onclick="toggleSolution('r1')">Voir la démo</button>
-      <code id="q1">
-        function addition(a, b) {
-          return a + b;
-        }
-      </code>
-      <code id="r1">
-        addition(3, 5) => 8, addition(-2, 2) => 0
-      </code>
-    </section>
-  
-    <section class="question">
-      <h3>Parité</h3>
-      <p>Ecrire une fonction qui permet de savoir si un nombre est pair ou non</p>
-      <button onclick="toggleSolution('q2')">Voir la solution</button>
-      <button onclick="toggleSolution('r2')">Voir la démo</button>
-      <code id="q2">
-        function pair(n) {
-          return n % 2 == 0;
-        }
-      </code>
-      <code id="r2">
-        pair(5) => false, pair(12) => true
-      </code>
-    </section>
+    <div class="questions">
+      <section class="question">
+        <h3>Somme</h3>
+        <p>
+          Ecrire une fonction qui permet de calculer la somme de deux nombres.
+        </p>
+        <button onclick="toggleSolution('q1')">Voir la solution</button>
+        <button onclick="toggleSolution('r1')">Voir la démo</button>
+        <code id="q1" class="answer">
+          function addition(a, b) { return a + b; }
+        </code>
+        <code id="r1" class="demo">
+          addition(3, 5) => 8, addition(-2, 2) => 0
+        </code>
+      </section>
 
-    <section class="question">
-      <h3>Majorité</h3>
-      <p>Ecrire une fonction qui permet de savoir si une personne est majeure</p>
-      <button onclick="toggleSolution('q3')">Voir la solution</button>
-      <button onclick="toggleSolution('r3')">Voir la démo</button>
-      <code id="q3">
-        function majorite(age) {
-          return age >= 18;
-        }
-      </code>
-      <code id="r3">
-        majorite(8) => false, majorite(19) => true
-      </code>
-    </section>
-  </div>
+      <section class="question">
+        <h3>Parité</h3>
+        <p>
+          Ecrire une fonction qui permet de savoir si un nombre est pair ou non
+        </p>
+        <button onclick="toggleSolution('q2')">Voir la solution</button>
+        <button onclick="toggleSolution('r2')">Voir la démo</button>
+        <code id="q2" class="answer">
+          function pair(n) { return n % 2 == 0; }
+        </code>
+        <code id="r2" class="demo"> pair(5) => false, pair(12) => true </code>
+      </section>
 
-  <a href="../index.html">Retour</a>
-</body>
+      <section class="question">
+        <h3>Majorité</h3>
+        <p>
+          Ecrire une fonction qui permet de savoir si une personne est majeure
+        </p>
+        <button onclick="toggleSolution('q3')">Voir la solution</button>
+        <button onclick="toggleSolution('r3')">Voir la démo</button>
+        <code id="q3" class="answer">
+          function majorite(age) { return age >= 18; }
+        </code>
+        <code id="r3" class="demo">
+          majorite(8) => false, majorite(19) => true
+        </code>
+      </section>
+    </div>
+
+    <a href="../index.html">Retour</a>
+  </body>
 </html>

@@ -12,6 +12,22 @@
   flex-direction: column;
 }
 
+.reponse {
+  display: flex;
+  align-items: center;
+  margin-left: 50%;
+  transform: translate(-20%, 0);
+}
 code {
   display: none;
+}
+
+.correct {
+  color: green;
+  font-size: bold;
+}
+
+#result,
+.correct {
+  font-weight: bolder;
 }

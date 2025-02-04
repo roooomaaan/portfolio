@@ -18,3 +18,17 @@
 code {
   display: none;
 }
+
+.answer,
+.demo {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.answer {
+  color: #1b901b;
+}
+
+.demo {
+  color: #22107b;
+}
