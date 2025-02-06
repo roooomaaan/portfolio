@@ -1,14 +1,26 @@
 function calculer() {
-  for (let index = 1; index <= 3; index++) {
-    document.getElementById(`result${index}`).value =
-      Number(document.getElementById(`prix${index}`).value) *
-      Number(document.getElementById(`quantite${index}`).value)
-  }
+  let ttotal = 0
 
-  document.getElementById("total").value =
-    Number(document.getElementById("result1").value) +
-    Number(document.getElementById("result2").value) +
-    Number(document.getElementById("result3").value)
+  document.querySelectorAll("#clone").forEach((el) => {
+    console.log(el)
+    const prix = Number(el.querySelector("#prix").value)
+    const quantity = Number(el.querySelector("#quantite").value)
+    const total = el.querySelector("#total")
+
+    total.value = prix * quantity
+    ttotal += Number(total.value)
+  })
+
+  const discount = Number(document.getElementById("discount").value) || 0
+  const tax = Number(document.getElementById("tax").value) || 0
+  const shipping = Number(document.getElementById("shipping").value) || 0
+
+  const tDiscount = ttotal * (discount / 100)
+  const tTax = ttotal * (tax / 100)
+  const res = ttotal - tDiscount + tTax + shipping
+
+  console.log(ttotal - tDiscount + tax + shipping)
+  document.getElementById("ttotal").innerHTML = `Total: ${res}€`
 }
 
 function add() {
@@ -19,12 +31,8 @@ function add() {
 }
 
 function reset() {
-  for (let index = 1; index <= 3; index++) {
-    document.getElementById(`article${index}`).value = ""
-    document.getElementById(`prix${index}`).value = ""
-    document.getElementById(`quantite${index}`).value = ""
-    document.getElementById(`result${index}`).value = ""
+  const inputs = document.getElementsByClassName("input-field")
+  for (let index = 0; index < inputs.length; index++) {
+    inputs[index].value = ""
   }
-
-  document.getElementById("total").value = ""
 }

@@ -14,118 +14,64 @@
           <td><b>Article</b></td>
           <td><b>Prix unitaire</b></td>
           <td><b>Quantité</b></td>
-          <td><b>Résultat</b></td>
-        </tr>
-        <tr>
-          <td>
-            <input
-              type="text"
-              name="article1"
-              id="article1"
-              class="input-field"
-            />
-          </td>
-          <td>
-            <input type="number" name="prix1" id="prix1" class="input-field" />
-          </td>
-          <td>
-            <input
-              type="number"
-              name="quantite1"
-              id="quantite1"
-              class="input-field"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              name="result1"
-              id="result1"
-              class="result-field"
-              readonly
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input
-              type="text"
-              name="article2"
-              id="article2"
-              class="input-field"
-            />
-          </td>
-          <td>
-            <input type="number" name="prix2" id="prix2" class="input-field" />
-          </td>
-          <td>
-            <input
-              type="number"
-              name="quantite2"
-              id="quantite2"
-              class="input-field"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              name="result2"
-              id="result2"
-              class="result-field"
-              readonly
-            />
-          </td>
+          <td><b>Sous total</b></td>
         </tr>
         <tr id="clone">
           <td>
-            <input
-              type="text"
-              name="article3"
-              id="article3"
-              class="input-field"
-            />
+            <input type="text" name="nom" id="nom" class="input-field" />
           </td>
           <td>
-            <input type="number" name="prix3" id="prix3" class="input-field" />
+            <input type="number" name="prix" id="prix" class="input-field" />
           </td>
           <td>
             <input
               type="number"
-              name="quantite3"
-              id="quantite3"
+              name="quantite"
+              id="quantite"
               class="input-field"
             />
           </td>
           <td>
             <input
-              type="text"
-              name="result3"
-              id="result3"
-              class="result-field"
-              readonly
-            />
-          </td>
-        </tr>
-        <tr class="total-row">
-          <td><b>Total TTC</b></td>
-          <td></td>
-          <td></td>
-          <td>
-            <input
-              type="text"
+              type="number"
               name="total"
               id="total"
-              class="total-field"
+              class="input-field"
               readonly
             />
           </td>
         </tr>
       </table>
+
       <div class="button-group">
         <button onclick="add()" class="button">Ajouter</button>
         <button onclick="reset()" class="button">Reset</button>
         <button onclick="calculer()" class="button">Calculer</button>
       </div>
+
+      <hr />
+
+      <div>
+        <input
+          type="number"
+          name="discount"
+          id="discount"
+          placeholder="Réduction (%)"
+        />
+        <input type="number" name="tax" id="tax" placeholder="Tax (%)" />
+        <input
+          type="number"
+          name="shipping"
+          id="shipping"
+          placeholder="Frais de livraison (€)"
+        />
+      </div>
+
+      <hr />
+
+      <span id="ttotal"></span>
+
+      <hr />
 
       <a href="../index.html">Retour</a>
     </div>
